@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.preloader{
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    margin: auto;
+    display: none;
+    place-content: center;
+    border-radius: 50%;
+    border: 2px dashed crimson;
+    animation: preload 4s linear infinite;
+    @keyframes preload {
+        0%{
+            transform: rotate(0turn) scale(0);
+            background-color: aqua;
+            transition: all 1s ease;
+            border-width: 10px;
+        }
+        100%{
+            transform: rotate(1turn) scale(1);
+            background-color: transparent;
+            border-width: 5px;
+            transition: all 1s ease-in-out;
+            border-style: ridge;
+        }
+    }
+}
+
+.video_container{
+ width: 100%;
+ height: 100%;
+ position: static;
+ display: none;
+
+video{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+.click{
+    background-color: aqua;
+    filter: brightness(90%);
+    cursor: pointer;
+    width: 65px;
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    appearance: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.fa-pause{
+    position: absolute;
+    font-size: 80px;
+    color: #fff;
+}
+.fa-play{
+    display: none;
+    position: absolute;
+    font-size: 80px;
+    color: #fff;
+}
+}
